@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import 'isomorphic-fetch'
 
 export default class MyPage extends React.Component {
@@ -11,7 +10,7 @@ export default class MyPage extends React.Component {
   }
 
   render () {
-    const { posts } = this.props;
+    const { posts } = this.props
     return (
       <div>
         <h1>Posts</h1>

@@ -2,10 +2,10 @@ const relativeResolve = require('../root-module-relative-path').default(require)
 
 const envPlugins = {
   'development': [
-    require.resolve('babel-plugin-transform-react-jsx-source'),
+    require.resolve('babel-plugin-transform-react-jsx-source')
   ],
   'production': [
-    require.resolve('babel-plugin-transform-react-remove-prop-types'),
+    require.resolve('babel-plugin-transform-react-remove-prop-types')
   ]
 }
 
