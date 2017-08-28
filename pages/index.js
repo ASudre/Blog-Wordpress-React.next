@@ -11,13 +11,14 @@ export default class MyPage extends React.Component {
   }
 
   render () {
+    const { posts } = this.props;
     return (
       <div>
         <h1>Posts</h1>
         <ul>
-          {this.props.posts.map(post => (
+          { posts ? posts.map(post => (
             <li style={{ color: 'black' }} key={post.id}>{post.title.rendered}</li>
-          ))}
+          )) : null}
         </ul>
       </div>
     )
