@@ -1,0 +1,23 @@
+# build output
+dist
+.next
+
+# logs
+*.log
+
+# coverage
+.nyc_output
+coverage
+
+# test output
+test/**/out
+.DS_Store
+
+#examples
+examples
+
+# Node
+node_modules/
+
+# OSX
+.DS_Store
