@@ -4,6 +4,10 @@ import { action } from '@storybook/addon-actions';
 import MyPage from '../pages';
 
 storiesOf('Posts list', module)
-.add('with one post', () => (
-  <MyPage posts={[{ id: 1, content: { rendered: 'coucou' } }]}/>
-));
+  .addDecorator(story => (
+    <div>
+      {story()}
+    </div>
+  ))
+  .add('without', () => <MyPage />)
+  .add('with one post', () => <MyPage posts={[{ id: 1, title: { rendered: 'coucou' } }]}/>);
