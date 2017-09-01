@@ -10,4 +10,4 @@ storiesOf('Posts list', module)
     </div>
   ))
   .add('without', () => <MyPage />)
-  .add('with one post', () => <MyPage posts={[{ id: 1, title: { rendered: 'coucou' } }]}/>);
+  .add('with one post', () => <MyPage posts={[{ id: 1, title: { rendered: 'codzeofijucou' } }]}/>);

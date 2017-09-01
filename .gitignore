@@ -13,9 +13,6 @@ coverage
 test/**/out
 .DS_Store
 
-#examples
-examples
-
 # Node
 node_modules/
 
