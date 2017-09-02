@@ -1,10 +1,17 @@
+// @flow
+
 import React from 'react'
 // $FlowIgnore unknown by flow
 import 'isomorphic-fetch'
 
+import type { Post } from '../types/posts';
 const WORDPRESS_URL = 'http://localhost:8080';
 
-export default class extends React.Component {
+type Props = {
+  posts: Post[],
+}
+
+export default class extends React.Component<Props> {
   static async getInitialProps () {
     const res = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/posts`)
     const json = await res.json()

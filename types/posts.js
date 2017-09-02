@@ -1,92 +1,94 @@
+// @flow
+
 export type Post = {
-  'id': number,
-  'date': string,
-  'date_gmt': 'string',
-  'guid': {
-    'rendered': 'string'
+  id: number,
+  date: string,
+  date_gmt: string,
+  guid: {
+    rendered: string
   },
-  'modified': 'string',
-  'modified_gmt': 'string',
-  'slug': 'string',
-  'status': 'string',
-  'type': 'string',
-  'link': 'string',
-  'title': {
-    'rendered': 'string'
+  modified: string,
+  modified_gmt: string,
+  slug: string,
+  status: string,
+  type: string,
+  link: string,
+  title: {
+    rendered: string
   },
-  'content': {
-    'rendered': 'string',
-    'protected': boolean
+  content: {
+    rendered: string,
+    protected: boolean
   },
-  'excerpt': {
-    'rendered': 'string',
-    'protected': boolean
+  excerpt: {
+    rendered: string,
+    protected: boolean
   },
-  'author': number,
-  'featured_media': number,
-  'comment_status': 'string',
-  'ping_status': 'string',
-  'sticky': boolean,
-  'template': 'string',
-  'format': 'string',
-  'meta': [],
-  'categories': [number],
-  'tags': [],
-  '_links': {
-    'self': [
+  author: number,
+  featured_media: number,
+  comment_status: string,
+  ping_status: string,
+  sticky: boolean,
+  template: string,
+  format: string,
+  meta: [],
+  categories: [number],
+  tags: [],
+  _links: {
+    self: [
       {
-        'href': 'string',
+        href: string,
       }
     ],
-    'collection': [
+    collection: [
       {
-        'href': 'string',
+        href: string,
       }
     ],
-    'about': [
+    about: [
       {
-        'href': 'string',
+        href: string,
       }
     ],
-    'author': [
+    author: [
       {
-        'embeddable': boolean,
-        'href': 'string',
+        embeddable: boolean,
+        href: string,
       }
     ],
-    'replies': [
+    replies: [
       {
-        'embeddable': boolean,
-        'href': 'string',
+        embeddable: boolean,
+        href: string,
       }
     ],
     'version-history': [
       {
-        'href': 'string',
+        href: string,
       }
     ],
     'wp:attachment': [
       {
-        'href': 'string',
+        href: string,
       }
     ],
     'wp:term': [
       {
-        'taxonomy': 'string',
-        'embeddable': boolean,
-        'href': 'string',
+        taxonomy: string,
+        embeddable: boolean,
+        href: string,
       },
       {
-        'taxonomy': 'string',
-        'embeddable': boolean,
-        'href': 'string',
+        taxonomy: string,
+        embeddable: boolean,
+        href: string,
       }
     ],
-    'curies': [
+    curies: [
       {
-        'name': 'string',
-        'href': 'string',
-        'templated': boolean
+        name: string,
+        href: string,
+        templated: boolean
       }
     ]
   }
