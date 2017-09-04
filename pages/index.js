@@ -1,25 +1,23 @@
 // @flow
 
-import React from 'react'
-// $FlowIgnore unknown by flow
-import 'isomorphic-fetch'
+import React from 'react';
 
 import type { Post } from '../types/posts';
-const WORDPRESS_URL = 'http://localhost:8080';
 
-type Props = {
+import getPosts from '../services/wordpressAPIService';
+
+type Props ={
   posts: Post[],
 }
 
 export default class extends React.Component<Props> {
-  static async getInitialProps () {
-    const res = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/posts`)
-    const json = await res.json()
-    return { posts: json }
+  static async getInitialProps() {
+    const posts = await getPosts();
+    return { posts };
   }
 
-  render () {
-    const { posts } = this.props
+  render() {
+    const { posts } = this.props;
     return (
       <div>
         <h1>Posts</h1>
@@ -29,6 +27,6 @@ export default class extends React.Component<Props> {
           )) : null}
         </ul>
       </div>
-    )
+    );
   }
 }

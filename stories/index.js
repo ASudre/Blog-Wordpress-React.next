@@ -1,6 +1,6 @@
 import React from 'react';
+// eslint-disable-next-line
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import MyPage from '../pages';
 
 storiesOf('Posts list', module)
@@ -10,4 +10,4 @@ storiesOf('Posts list', module)
     </div>
   ))
   .add('without', () => <MyPage />)
-  .add('with one post', () => <MyPage posts={[{ id: 1, title: { rendered: 'codzeofijucou' } }]}/>);
+  .add('with one post', () => <MyPage posts={[{ id: 1, title: { rendered: 'coucou' } }]} />);
