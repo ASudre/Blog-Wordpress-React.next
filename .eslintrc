@@ -6,8 +6,17 @@
     "react/prop-types": [0],
     "jsx-a11y/href-no-hash": "off",
   },
+  "globals": {
+    "fetch": false,
+    "describe": true,
+    "it": true,
+    "expect": true
+  },
   "plugins": [
     "react",
     "flowtype"
-  ]
+  ],
+  "env": {
+    "jest": true
+  }
 }

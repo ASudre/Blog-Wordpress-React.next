@@ -1,8 +1,10 @@
 {
     "presets": [
-        "next/babel"
+      "next/babel",
+      "es2015",
+      "react"
     ],
     "plugins": [
-        "transform-flow-strip-types"
+      "transform-flow-strip-types"
     ]
 }
