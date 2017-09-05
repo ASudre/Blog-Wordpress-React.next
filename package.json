@@ -12,12 +12,15 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "wordpress": "docker-compose -f docker/docker-compose.yml up",
     "prettier": "./node_modules/prettier/bin/prettier.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "next": "^3.2.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-addons-transition-group": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "reactstrap": "^4.8.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
