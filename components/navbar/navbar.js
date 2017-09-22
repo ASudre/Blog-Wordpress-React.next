@@ -1,66 +1,39 @@
+// @flow
+
 import React from 'react';
+import { withStyles } from 'material-ui/styles';
+import AppBar from 'material-ui/AppBar';
+import Toolbar from 'material-ui/Toolbar';
+import Typography from 'material-ui/Typography';
+import IconButton from 'material-ui/IconButton';
+import MenuIcon from 'material-ui-icons/Menu';
 
-import { Collapse, DropdownToggle, DropdownMenu, DropdownItem, Navbar, NavbarToggler, NavbarBrand, NavDropdown, Nav, NavItem, NavLink } from 'reactstrap';
-
-const styles = {
-  primary: {
-    backgroundColor: '#e3f2fd',
+const styles = () => ({
+  flex: {
+    flex: 1,
   },
-};
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+});
 
-export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.toggleDropDown = this.toggleDropDown.bind(this);
-    this.state = {
-      isOpen: false,
-      dropdownOpen: false,
-    };
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen,
-    });
-  }
-
-  toggleDropDown() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen,
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <Navbar style={styles.primary} light toggleable>
-          <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavDropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropDown}>
-                <DropdownToggle nav caret>
-                  Dropdown
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem header>Header</DropdownItem>
-                  <DropdownItem disabled>Action</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Another Action</DropdownItem>
-                </DropdownMenu>
-              </NavDropdown>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
-    );
-  }
+function ButtonAppBar(props) {
+  const classes = props.classes;
+  return (
+    <div>
+      <AppBar position="static" style={{ margin: 0 }}>
+        <Toolbar>
+          <IconButton className={classes.menuButton} color="contrast" aria-label="Menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography type="title" color="inherit" className={classes.flex}>
+            Title
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
+
+export default withStyles(styles)(ButtonAppBar);
