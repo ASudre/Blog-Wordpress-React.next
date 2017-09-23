@@ -1,10 +1,11 @@
 {
     "presets": [
       "next/babel",
-      "es2015",
+      "env",
       "react"
     ],
     "plugins": [
-      "transform-flow-strip-types"
+      "transform-flow-strip-types",
+      "transform-class-properties"
     ]
 }
